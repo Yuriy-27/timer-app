@@ -60,7 +60,7 @@ export class TimerComponent implements AfterViewInit {
       console.log('timer start');
     } else {
       this.running = 0;
-      clearTimeout(this.timeoutHandler);
+      this.timeoutHandler.unsubscribe();
       console.log('timer stoped');
     }
   }
